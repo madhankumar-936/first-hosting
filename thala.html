@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f4f4f4;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 100px 20px;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+      /* Home Section with a Transparent Dark Background */
+#home {
+    background-color: rgba(51, 51, 51, 0.8); /* 80% opaque dark background */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh; /* Make sure it covers full screen height */
+}
+
+/* Other Sections with Semi-Transparent White Background */
+#about, #projects, #contact {
+    background-color: rgba(244, 244, 244, 0.8); /* 80% opaque white background */
+    padding: 20px;
+}
+/* Home Section with Transparent Background Image */
+#home {
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    z-index: 1; /* Ensure content stays on top */
+}
+
+/* Transparent Background Image using :before */
+#home:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('home-background.jpg'); /* Path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5; /* Adjust transparency level */
+    z-index: -1; /* Make sure it stays behind the content */
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar styling */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f4f4f4;
+        }
+
+        /* Home Section with Transparent Background Image */
+        #home {
+            position: relative;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            z-index: 1; /* Ensure content stays on top */
+        }
+
+        #home:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('home-background.jpg'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.5; /* Transparent background image */
+            z-index: -1; /* Keep behind content */
+        }
+
+        /* About, Projects, and Contact Sections */
+        #about, #projects, #contact {z
+            background-color: #f4f4f4;
+            padding: 50px 20px;
+        }
+
+        .section {
+            text-align: center;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color:
+
+
+        .project-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .project-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contact Form */
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        input, textarea {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        /* Scroll Animation */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Ensure the project-container is responsive */
+.project-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    justify-content: space-around;
+    gap: 20px; /* Adds space between items */
+    padding: 20px;
+}
+
+/* Style individual project cards */
+.project-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: calc(33% - 40px); /* Three cards in a row minus spacing */
+    box-sizing: border-box; /* Ensure padding is inside the box */
+}
+
+.project-card img {
+    max-width: 100%; /* Ensure images resize within the card */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+    .project-card {
+        width: calc(50% - 40px); /* Two cards per row for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        width: 100%; /* One card per row for smaller screens */
+    }
+}
+/* Footer Styling */
+footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            footer p {
+                font-size: 12px;
+            }
+        }
+        
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="section">
+        <h1>Hi, I'm Madhan Kumar</h1>
+        <p>Web Developer | Designer</p>
+        <button onclick="scrollToSection('about')">Learn More</button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>This is where you can write about yourself, your experience, and your skills.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit optio, illo consectetur quae possimus quibusdam qui eius nulla ad beatae blanditiis fugit rerum vel cumque alias nisi impedit a quisquam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores illum, cumque eaque eius odit magnam rerum laborum cum reprehenderit reiciendis repudiandae! Eius officia aliquam quia harum, cum corporis impedit aspernatur.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia expedita tenetur, iure, odit blanditiis commodi aliquam cumque reiciendis eveniet ratione adipisci harum exercitationem vitae aliquid. Nesciunt repudiandae error consequuntur dolorum.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias velit debitis quia aperiam tenetur maiores iure dolorum libero voluptatibus repellat impedit fugiat id voluptates, perferendis quam labore ut voluptate nesciunt!
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum incidunt sunt hic amet nisi rerum ducimus, temporibus ipsa possimus totam quisquam aliquam distinctio qui blanditiis in dolorem velit, cupiditate id.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos rerum praesentium at repellat doloribus! Mollitia velit unde non cum, ipsam quas voluptatum aliquam officiis cupiditate alias quo magnam temporibus aliquid?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit saepe eveniet dignissimos eum nihil, temporibus ad neque dolor officiis beatae amet cum fugiat repellat. Tempore inventore eos esse culpa exercitationem.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque repellendus labore nostrum aut, obcaecati nemo quibusdam, quis doloribus provident exercitationem autem recusandae temporibus beatae, tempora magni ea quo alias possimus.
+        </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="project-container">
+            <div class="project-card">
+                <img src="web.jpeg" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>Description of the project goes here.</p>
+            </div>
+            <div class="project-card">
+                <img src="design'.jpeg" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>Description of the project goes here.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+</footer>
+
+
+    <script>
+        // Scroll to section function
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+
+        // Contact form submit event
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+            
+            if (name && email && message) {
+                alert("Thank you for reaching out, " + name + "! I'll get back to you soon.");
+                // Reset the form after submission
+                document.getElementById("contact-form").reset();
+            } else {
+                alert("Please fill out all the fields.");
+            }
+        });
+    </script>
+</body>
+</html>
